@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Library {
 
-    private List<Publication> publications = new ArrayList<>();
+    private final List<Publication> publications = new ArrayList<>();
 
 
     public List<Publication> getPublications() {

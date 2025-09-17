@@ -4,20 +4,20 @@ import java.util.Objects;
 
 public class Book extends Publication {
 
-    private String ISBN;
+    private String isbn;
 
-    public Book(String title, String author, int year, String ISBN) {
+    public Book(String title, String author, int year, String isbn) {
         super(title, author, year);
-        this.ISBN = ISBN;
+        this.isbn = isbn;
     }
 
 
-    public String getISBN() {
-        return ISBN;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     @Override
@@ -30,12 +30,12 @@ public class Book extends Publication {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Book book = (Book) o;
-        return Objects.equals(ISBN, book.ISBN);
+        return Objects.equals(isbn, book.isbn);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), ISBN);
+        return Objects.hash(super.hashCode(), isbn);
     }
 
     @Override
@@ -44,13 +44,13 @@ public class Book extends Publication {
                 "title=" + super.getTitle() +
                 ", author=" + super.getAuthor() +
                 ", year=" + super.getYear() +
-                ", ISBN=" + ISBN +
+                ", ISBN=" + isbn +
                 "}";
     }
 
     @Override
     public void printDetails() {
         System.out.printf("Book: \ntitle - %s, \nauthor - %s, \nyear - %s, \nISBN - %s\n",
-                getTitle(), getAuthor(), getYear(), ISBN);
+                getTitle(), getAuthor(), getYear(), isbn);
     }
 }
